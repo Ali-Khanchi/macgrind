@@ -1,0 +1,11 @@
+services:
+  gcc_valgrind:
+    image: gcc-valgrind
+    build:
+      context: .
+    container_name: gcc_valgrind
+    volumes:
+      - ./app:/home/app  # Mount local `app` directory in container (change values as you like)
+    working_dir: /home/app
+    stdin_open: true
+    tty: true
